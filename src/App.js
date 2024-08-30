@@ -7,6 +7,7 @@ import { Skills } from "./components/Skills.js";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { About } from "./components/About";  // <-- Import the About component
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
+      <About /> {/* <-- Add About section here */}
       <Projects />
       <Contact />
       <Footer />
