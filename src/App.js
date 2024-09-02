@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from "./components/NavBar.js";
-import { Banner } from "./components/Banner.js";
-import { Skills } from "./components/Skills.js";
+import { NavBar } from "./components/NavBar";
+import { Banner } from "./components/Banner";
+import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { About } from "./components/About";  // <-- Import the About component
+import { AboutPage } from "./components/AboutPage"; // <-- Separate About page
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Banner />
-      <Skills />
-      <About /> {/* <-- Add About section here */}
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {/* Main Single Page */}
+        <Route path="/" element={
+          <div className="App">
+            <NavBar />
+            <Banner />
+            <Skills />
+            <Projects />
+            <Contact />
+            <Footer />
+          </div>
+        } />
+
+        {/* About Page */}
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
   );
 }
 

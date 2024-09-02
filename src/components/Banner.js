@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
+import { HashLink } from 'react-router-hash-link';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
@@ -11,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Freelancer","Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Freelancers","Web Developer", "Web Designer", "UI/UX Designer" ];
   const period = 1000;
 
   useEffect(() => {
@@ -56,9 +57,12 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to Our Portfolio</span>
-                <h1>{`Hi! We our`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Freelancer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h1>{`Hi! We are`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Freelancer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>At CodeDploy, we create custom websites that not only showcase your brand’s unique identity but also drive business growth. A well-designed website acts as your digital storefront, reaching a global audience and providing 24/7 access to your products or services. By going online, you can attract more customers, streamline operations, and enhance your brand’s credibility. Our expert team ensures your website is visually appealing, user-friendly, and optimized for search engines, helping you stand out in the digital landscape and achieve your business goals.
+                  </p>
+                  <HashLink to='/#connect'>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </HashLink>             
               </div>}
             </TrackVisibility>
           </Col>

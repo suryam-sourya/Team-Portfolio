@@ -95,7 +95,8 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: 13%;
+    height: auto;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -233,11 +234,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 180px 0 100px 0;
   background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.banner .HashLink{
+text-decoration: none;
 }
 .banner .tagline {
   font-weight: 700;
@@ -302,7 +306,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 80px 0;
   position: relative;
 }
 .skill-bx {
@@ -340,12 +344,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 /*************** about ******************/
-.about h2 {
-	font-size: 45px;
-	font-weight: 700;
+.about {
+  position: relative;
+  padding: 120px 0; /* Add some padding to ensure the content is not too close to the edges */
 }
-.about p{
-  color: #B8B8B8;
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../src/assets/img/banner-bg.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.about h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.about h3 {
+  font-size: 36px; /* Slightly smaller than h2 */
+  font-weight: 600; /* Less bold than h2 */
+}
+
+.about h4 {
+  font-size: 30px; /* Smaller than h3 */
+  font-weight: 40; /* Even less bold than h3 */
+}
+
+
+.about p {
+    color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -478,6 +515,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/* styles.css */
+.navbar-link {
+  
+  text-decoration: none; /* Remove underline */
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+.navbar-link:hover {
+  color: #fff; /* Make it white on hover */
+  opacity: 1;   /* Increase opacity to 1 for full white */
+}
+
+.navbar-link:hover {
+  color: rgba(255, 255, 255, 0.968); /* Hover color */
+}
+
+.navbar-link.active {
+  color: white; /* Active link color */
+  text-decoration: none; /* Ensure underline is removed for active link */
+}
+
+
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -559,9 +622,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 .newsletter-bx {
-  background: #FFFFFF;
+  background: #0b0b0b;
   border-radius: 55px;
-  color: #121212;
+  color: #e9e0e0;
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
@@ -628,3 +691,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
