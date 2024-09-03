@@ -10,6 +10,30 @@ import aboutImg from '../assets/img/contact-img.svg'; // Main section image
 import colorSharp2 from "../assets/img/banner-bg.png"; // Background image
 import { Footer } from './Footer';
 
+const teamMembers = [
+  {
+    name: "Abhishek Bajpai",
+    title: "App Developer",
+    description: "Our App Developers ensure your infrastructure is scalable, secure, and optimized for peak performance, leveraging their expertise in both web and mobile app development.",
+    imgSrc: abhi,
+    linkedIn: "https://www.linkedin.com/in/abhishek-bajpai1/",
+  },
+  {
+    name: "Aman Joshi",
+    title: "Fullstack Developer",
+    description: "Our Fullstack Developers use the MERN stack to build and solve complex web solutions, with expertise in React, efficient data structure management, and end-to-end project development.",
+    imgSrc: aman,
+    linkedIn: "https://www.linkedin.com/in/aman-joshi-064433192/",
+  },
+  {
+    name: "Suryam Sourya",
+    title: "DevOps Engineer",
+    description: "Our certified DevOps Engineers streamline your development processes, ensuring efficient deployment and system reliability, with expertise in AWS, Azure, and cloud engineering.",
+    imgSrc: suryam,
+    linkedIn: "https://www.linkedin.com/in/suryam-sourya/",
+  },
+];
+
 export const About = () => {
   return (
     <section className="about" id="about">
@@ -94,54 +118,36 @@ export const About = () => {
           </Col>
         </Row>
 
-        {/* Team Section */}
-        <Row className="mb-5">
+       {/* Team Section */}
+       <Row className="mb-5">
           <Col xs={12}>
             <TrackVisibility>
-              {({ isVisible }) => 
+              {({ isVisible }) => (
                 <h3 className={`text-center mb-4 ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}>
                   Meet Our Team
                 </h3>
-              }
+              )}
             </TrackVisibility>
           </Col>
-          <Col xs={12} md={4} className="text-center mb-4">
-            <TrackVisibility>
-              {({ isVisible }) => 
-                <div className={`text-center ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}>
-                  <img src={abhi} alt="Cloud Engineer" className="img-fluid mb-3" style={{ maxWidth: '150px' }} />
-                  <h4>Abhishek Bajpai</h4>
-                  <h5> App Developer</h5>
-                  <p>Our App Developers ensure your infrastructure is scalable, secure, and optimized for peak performance, leveraging their expertise in both web and mobile app development.
-                  </p>
-                </div>
-              }
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={4} className="text-center mb-4">
-            <TrackVisibility>
-              {({ isVisible }) => 
-                <div className={`text-center ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}>
-                  <img src={aman} alt="Fullstack Developer" className="img-fluid mb-3" style={{ maxWidth: '150px' }} />
-                  <h4>Aman joshi</h4>
-                  <h5>Fullstack Developer</h5>
-                  <p>Our Fullstack Developers use the MERN stack to build and solve complex web solutions, with expertise in React, efficient data structure management, and end-to-end project development.</p>
-                </div>
-              }
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={4} className="text-center mb-4">
-            <TrackVisibility>
-              {({ isVisible }) => 
-                <div className={`text-center ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}>
-                  <img src={suryam} alt="DevOps Engineer" className="img-fluid mb-3" style={{ maxWidth: '150px' }} />
-                  <h4>Suryam Sourya </h4>
-                  <h5>DevOps Engineer </h5>
-                  <p>Our certified DevOps Engineers streamline your development processes, ensuring efficient deployment and system reliability, with expertise in AWS, Azure, and cloud engineering.</p>
-                </div>
-              }
-            </TrackVisibility>
-          </Col>
+        </Row>
+
+        <Row>
+          {teamMembers.map((member, index) => (
+            <Col key={index} xs={12} md={4} className="text-center mb-4">
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div className={`text-center ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}>
+                    <img src={member.imgSrc} alt={member.title} className="img-fluid mb-3" style={{ maxWidth: '150px' }} />
+                    <a href={member.linkedIn} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <h4>{member.name}</h4>
+                    </a>
+                    <h5>{member.title}</h5>
+                    <p>{member.description}</p>
+                  </div>
+                )}
+              </TrackVisibility>
+            </Col>
+          ))}
         </Row>
 
         {/* Why Choose Us Section */}
