@@ -13,9 +13,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
 
-  // Define toRotate inside the component
   const toRotate = ["Freelancers", "Web Developer", "Web Designer", "UI/UX Designer"];
-
   // Memoize the tick function with useCallback
   const tick = useCallback(() => {
     const i = loopNum % toRotate.length;
@@ -38,7 +36,7 @@ export const Banner = () => {
       setLoopNum(prevLoopNum => prevLoopNum + 1);
       setDelta(500);
     }
-  }, [loopNum, isDeleting, text.length, period, toRotate]);
+  }, [loopNum, isDeleting, text.length, period]);
 
   useEffect(() => {
     const ticker = setInterval(() => {
