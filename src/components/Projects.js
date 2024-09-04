@@ -151,7 +151,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Our Work</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>At CodeDploy, we specialize in end-to-end website development, from building full-scale company websites for small businesses to creating personalized portfolios for students and individuals. We also offer professional logo design services to help businesses establish a strong brand identity. With numerous successful projects already deployed and a growing list of happy customers, we take pride in delivering high-quality digital solutions that drive business growth.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>

@@ -369,15 +369,37 @@ text-decoration: none;
   font-size: 45px;
   font-weight: 700;
 }
-
+.about h2:hover {
+  color: #E0115F;
+}
 .about h3 {
   font-size: 36px; /* Slightly smaller than h2 */
   font-weight: 600; /* Less bold than h2 */
 }
-
+.about h3:hover {
+  color: #E0115F;
+}
 .about h4 {
+  
   font-size: 30px; /* Smaller than h3 */
   font-weight: 40; /* Even less bold than h3 */
+}
+.about h4:hover {
+  color: #E0115F;
+  font-size: 30px; /* Smaller than h3 */
+  font-weight: 40; /* Even less bold than h3 */
+}
+
+.about .no-decoration {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+.about .no-decoration:hover {
+  color: #AA367C; /* Optional for hover effect */
 }
 
 
@@ -401,13 +423,13 @@ text-decoration: none;
   text-align: center;
 }
 .project p {
-  color: #B8B8B8;
+    color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  
 }
 .project .nav.nav-pills {
   width: 72%;
