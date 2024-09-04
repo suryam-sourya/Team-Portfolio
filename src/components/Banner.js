@@ -6,6 +6,9 @@ import 'animate.css';
 import { HashLink } from 'react-router-hash-link';
 import TrackVisibility from 'react-on-screen';
 
+// Define `toRotate` outside the component to maintain a stable reference
+const toRotate = ["Freelancers", "Web Developer", "Web Designer", "UI/UX Designer"];
+
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -13,7 +16,6 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
 
-  const toRotate = ["Freelancers", "Web Developer", "Web Designer", "UI/UX Designer"];
   // Memoize the tick function with useCallback
   const tick = useCallback(() => {
     const i = loopNum % toRotate.length;
