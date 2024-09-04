@@ -1,109 +1,9 @@
-// <<<<<<< HEAD
-// import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-// import { ProjectCard } from "./ProjectCard";
-// import projImg1 from "../assets/img/project-img1.png";
-// import projImg2 from "../assets/img/project-img2.png";
-// import projImg3 from "../assets/img/project-img3.png";
-// import colorSharp2 from "../assets/img/color-sharp2.png";
-// import 'animate.css';
-// import TrackVisibility from 'react-on-screen';
-
-// export const Projects = () => {
-
-//   const projects = [
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg1,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg2,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg3,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg1,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg2,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg3,
-//     },
-//   ];
-
-//   return (
-//     <section className="project" id="projects">
-//       <Container>
-//         <Row>
-//           <Col size={12}>
-//             <TrackVisibility>
-//               {({ isVisible }) =>
-//               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-//                 <h2>Our Work</h2>
-//                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-//                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-//                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-//                     <Nav.Item>
-//                       <Nav.Link eventKey="first">Tab 1</Nav.Link>
-//                     </Nav.Item>
-//                     <Nav.Item>
-//                       <Nav.Link eventKey="second">Tab 2</Nav.Link>
-//                     </Nav.Item>
-//                     <Nav.Item>
-//                       <Nav.Link eventKey="third">Tab 3</Nav.Link>
-//                     </Nav.Item>
-//                   </Nav>
-//                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-//                     <Tab.Pane eventKey="first">
-//                       <Row>
-//                         {
-//                           projects.map((project, index) => {
-//                             return (
-//                               <ProjectCard
-//                                 key={index}
-//                                 {...project}
-//                                 />
-//                             )
-//                           })
-//                         }
-//                       </Row>
-//                     </Tab.Pane>
-//                     <Tab.Pane eventKey="section">
-//                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-//                     </Tab.Pane>
-//                     <Tab.Pane eventKey="third">
-//                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-//                     </Tab.Pane>
-//                   </Tab.Content>
-//                 </Tab.Container>
-//               </div>}
-//             </TrackVisibility>
-//           </Col>
-//         </Row>
-//       </Container>
-//       <img className="background-image-right" src={colorSharp2} alt="bgimg
-//       "></img>
-//     </section>
-//   )
-// =======
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import Ecommerce from "../assets/img/capitalshop-free-template-353x278.jpg";
+import Fitcloth from "../assets/img/Fitcloth.png";
+import Sth from "../assets/img/Sth.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -111,34 +11,19 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
+      title: "Ecommerce Website",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: Ecommerce,
+    },
+    {
+      title: "Fitcloth",
+      description: "Design & Development",
+      imgUrl: Fitcloth,
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: Sth,
     },
   ];
 
@@ -149,51 +34,32 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Our Work</h2>
-                <p>At CodeDploy, we specialize in end-to-end website development, from building full-scale company websites for small businesses to creating personalized portfolios for students and individuals. We also offer professional logo design services to help businesses establish a strong brand identity. With numerous successful projects already deployed and a growing list of happy customers, we take pride in delivering high-quality digital solutions that drive business growth.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h2>Our Work</h2>
+                  <p>At CodeDploy, we specialize in end-to-end website development, from building full-scale company websites for small businesses to creating personalized portfolios for students and individuals. We also offer professional logo design services to help businesses establish a strong brand identity. With numerous successful projects already deployed and a growing list of happy customers, we take pride in delivering high-quality digital solutions that drive business growth.</p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                      <Tab.Pane eventKey="first">
+                        <Row>
+                          {projects.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
                                 {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
+                              />
+                            );
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="bgimg
-      "></img>
+      <img className="background-image-right" src={colorSharp2} alt="bgimg" />
     </section>
-  )
+  );
 }
