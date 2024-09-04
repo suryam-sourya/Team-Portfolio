@@ -31,8 +31,8 @@
   },
   "scripts": {
   "start": "react-scripts start",
-  "clean": "npm install",
-  "build": "npm run clean && react-scripts build",
+  "clean": "npm install --legacy-peer-deps",
+  "build": "CI=false npm run clean && react-scripts build",
   "test": "react-scripts test",
   "eject": "react-scripts eject"
 },
