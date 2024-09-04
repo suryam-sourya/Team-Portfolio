@@ -1,6 +1,3 @@
-// Define toRotate outside the component to maintain a stable reference
-const toRotate = ["Freelancers", "Web Developer", "Web Designer", "UI/UX Designer"];
-
 import { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
@@ -15,6 +12,9 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
+
+  // Define toRotate inside the component
+  const toRotate = ["Freelancers", "Web Developer", "Web Designer", "UI/UX Designer"];
 
   // Memoize the tick function with useCallback
   const tick = useCallback(() => {
@@ -38,7 +38,7 @@ export const Banner = () => {
       setLoopNum(prevLoopNum => prevLoopNum + 1);
       setDelta(500);
     }
-  }, [loopNum, isDeleting, text.length, period]);
+  }, [loopNum, isDeleting, text.length, period, toRotate]);
 
   useEffect(() => {
     const ticker = setInterval(() => {
