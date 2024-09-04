@@ -6,6 +6,12 @@ import aman from '../assets/img/aman.png'
 import abhi from "../assets/img/abhi.png"
 import suryam from "../assets/img/suryam.png"
 import { HashLink } from 'react-router-hash-link';
+<<<<<<< HEAD
+=======
+// import aboutImg from '../assets/img/contact-img.svg'; // Main section image
+// import colorSharp2 from "../assets/img/banner-bg.png"; // Background image
+// import { Footer } from './Footer';
+>>>>>>> a4650580e95f652096e66fa5aaff905d0ac79ffb
 
 const teamMembers = [
   {
