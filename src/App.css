@@ -551,8 +551,52 @@ text-decoration: none;
   background-repeat: no-repeat;
 }
 
-.footer quicklink:hover {
+.footer img {
+  width: 46%;
+  filter: brightness(0) invert(1); /* Make the logo white */
+  transition: filter 0.3s ease-in-out;
+}
+
+
+.footer a {
+  color: #ffffffb3; /* Default link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#quicklink a {
+  color: #ffffffb3;
+}
+
+#quicklink a:hover {
   color: #f39c12;
+}
+.email-link {
+  color: #ffffffb3; /* Default color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.email-link:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
 .footer .social-icon {
@@ -592,9 +636,9 @@ transition: 0.3s ease-in-out;
 .social-icon a:hover img {
 filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
-.footer img {
+/* .footer img {
   width: 46%;
-}
+} */
 .footer p {
   font-weight: 400;
   font-size: 14px;

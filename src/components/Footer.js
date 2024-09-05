@@ -16,16 +16,16 @@ export const Footer = () => {
           <Col size={12} md={4} className="text-center text-md-center mb-4 mb-md-0" id="quicklink">
             <h5>Quick Links</h5>
             <ul className="list-unstyled" style={{ padding: 0 }}>
-              <li><a href="#home" style={{ color: '#ffffffb3', textDecoration: 'none' }}>Home</a></li>
-              <li><a href="#projects" style={{ color: '#ffffffb3', textDecoration: 'none' }}>Projects</a></li>
-              <li><a href="#skills" style={{ color: '#ffffffb3', textDecoration: 'none' }}>Services</a></li>
-              <li><a href="#connect" style={{ color: '#ffffffb3', textDecoration: 'none' }}>Contact</a></li>
+              <li><a href="#home" style={{  textDecoration: 'none' }}>Home</a></li>
+              <li><a href="#projects" style={{  textDecoration: 'none' }}>Projects</a></li>
+              <li><a href="#skills" style={{ textDecoration: 'none' }}>Services</a></li>
+              <li><a href="#connect" style={{  textDecoration: 'none' }}>Contact</a></li>
             </ul>
           </Col>
 
           <Col size={12} md={4} className="text-center text-md-end">
             <h5>Contact Us</h5>
-            <p>Email: <a href="mailto:contact@codedeploy.com" style={{ color: '#ffffffb3', textDecoration: 'none' }}>contact@codedeploy.com</a></p>
+          <p>Email: <a className="email-link" href="mailto:contact@codedeploy.com" style={{ color: "#f39c12;", textDecoration: 'none' }}>contact@codedeploy.com</a></p>
             <div className="social-icon">
               <a href="https://www.linkedin.com/company/codedeploy/" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon1} alt="LinkedIn" style={{ margin: '0 10px' }} />
