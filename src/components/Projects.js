@@ -12,17 +12,17 @@ export const Projects = () => {
   const projects = [
     {
       title: "Ecommerce Website",
-      description: "Design & Development",
+      description: "A responsive online store with secure payments and smooth user experience.",
       imgUrl: Ecommerce,
     },
     {
       title: "Fitcloth",
-      description: "Design & Development",
+      description: "A sleek fashion site offering personalized shopping and easy navigation.",
       imgUrl: Fitcloth,
     },
     {
       title: "Business Startup",
-      description: "Design & Development",
+      description: "A professional website to boost brand identity and customer engagement.",
       imgUrl: Sth,
     },
   ];
