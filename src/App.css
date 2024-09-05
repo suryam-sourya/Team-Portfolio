@@ -105,7 +105,7 @@ nav.navbar.scrolled {
 
 /* When scrolled, revert the logo to its original state */
 .scrolled-logo {
-  filter: invert(0%); /* Reset to original logo color */
+  filter: invert(50%); /* Reset to original logo color */
 }
 
 /* Rest of the navbar styles */
@@ -553,10 +553,15 @@ text-decoration: none;
 
 .footer img {
   width: 46%;
-  filter: brightness(0) invert(1); /* Make the logo white */
+  filter:  invert(100%); /* Make the logo white */
   transition: filter 0.3s ease-in-out;
 }
 
+.footer img:hover {
+  width: 46%;
+  filter:  invert(50%); 
+  transition: filter 0.3s ease-in-out;
+}
 
 .footer a {
   color: #ffffffb3; /* Default link color */
