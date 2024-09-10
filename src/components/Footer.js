@@ -9,7 +9,7 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={4} className="text-center text-md-start mb-4 mb-md-0">
-            <img src={logo} alt="CodeDploy Logo" style={{ width: '150px', marginBottom: '20px' }} />
+            <a href="/"><img  src={logo} alt="CodeDploy Logo" style={{ width: '150px', marginBottom: '20px' }} /></a>
             <p>CodeDploy offers end-to-end website development and design solutions that empower businesses to grow online.</p>
           </Col>
 
