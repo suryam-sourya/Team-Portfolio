@@ -34,7 +34,7 @@ export const NavBar = () => {
           <img
             src={logo}
             alt="Logo"
-            className={scrolled ? "scrolled-logo" : "default-logo"} // Add class dynamically
+            className={scrolled ? "scrolled-logo" : "default-logo"}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -43,9 +43,16 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="/#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link href="/#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Services</Nav.Link>
             <Link to="/about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Link>
+            <Link to="/tech-stack" className={activeLink === 'tech-stack' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('tech-stack')}>
+            Technologies
+            </Link>
+            <Nav.Link href="/#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Services</Nav.Link>
+            
             <Nav.Link href="/#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Our Work</Nav.Link>
+            
+            {/* Add the Tech Stack link here */}
+            
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">

@@ -8,7 +8,7 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AboutPage } from "./components/AboutPage"; // <-- Separate About page
-
+import {TechPage} from "./components/TechPage"
 function App() {
   return (
     <Router>
@@ -27,6 +27,7 @@ function App() {
 
         {/* About Page */}
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/tech-stack" element={<TechPage />} />
       </Routes>
     </Router>
   );
