@@ -1,0 +1,193 @@
+
+/* Add blur effect when modal is open */
+.modal-content {
+    background-color:black; /* Dark blue background for the modal */
+    color: #ecf0f1; /* Light text for better contrast */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    text-align: center; /* Center the text */
+}
+
+.modal-header {
+    border-bottom: none;
+    font-size: 1.5rem;
+    background-color: #34495e; /* Darker background for header */
+    color: #ecf0f1;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    margin: 0 auto;
+    color: #f39c12; /* Eye-catching color for title */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.modal-body {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.modal-body h4 {
+    color: #f39c12; /* Match header color */
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.modal-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal-body ul li {
+    background-color: black; /* Contrast for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ecf0f1; /* Lighter text */
+    font-size: 1.1rem;
+}
+
+.modal-footer {
+    border-top: none;
+    background-color:black;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.btn-secondary {
+    background-color: #e74c3c; /* Red button for emphasis */
+    border: none;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+
+/* Existing styles remain unchanged */
+
+.pricing-section {
+    padding: 130px 0;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* Ensure text is white on dark background */
+}
+
+.subheading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #f8f9fa; /* Light color for heading */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+.pricing-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Dark shadow for cards */
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    background: linear-gradient(145deg, #2b2b2b, #3d3d3d); /* Dark gradient for cards */
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    color: #ddd; /* Lighter text color for contrast */
+}
+.pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(243, 156, 18, 0.7), /* Bright orange glow effect */
+                0 0 40px rgba(243, 156, 18, 0.5); /* Lighter outer glow for a soft effect */
+    border: 1px solid rgba(243, 156, 18, 0.8); /* Glowing border effect */
+}
+
+.pricing-card.alpha:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(255, 165, 0, 0.7), /* Orange glow for Alpha card */
+                0 0 40px rgba(255, 165, 0, 0.5);
+    border: 1px solid rgba(255, 165, 0, 0.8);
+}
+
+.pricing-card.beta:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(0, 123, 255, 0.7), /* Blue glow for Beta card */
+                0 0 40px rgba(0, 123, 255, 0.5);
+    border: 1px solid rgba(0, 123, 255, 0.8);
+}
+
+.pricing-card.gamma:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(46, 204, 113, 0.7), /* Green glow for Gamma card */
+                0 0 40px rgba(46, 204, 113, 0.5);
+    border: 1px solid rgba(46, 204, 113, 0.8);
+}
+
+
+.pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* More intense shadow on hover */
+}
+
+.pricing-card.alpha {
+    background-color: #292929;
+    background: linear-gradient(145deg, #2e2e2e, #4a4a4a); /* Gradient for alpha card */
+}
+
+.pricing-card.beta {
+    background-color: #333;
+    background: linear-gradient(145deg, #3b3b3b, #515151); /* Gradient for beta card */
+}
+
+.pricing-card.gamma {
+    background-color: #3e3e3e;
+    background: linear-gradient(145deg, #464646, #5c5c5c); /* Gradient for gamma card */
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f39c12; /* Bright, attractive color for headings */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #bbb; /* Lighter text color for readability */
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12; /* Bright orange button */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); /* Orange shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #d35400; /* Darker orange on hover */
+    box-shadow: 0 10px 20px rgba(211, 84, 0, 0.6); /* Stronger shadow on hover */
+}
+
+.buy-btn span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-card:hover .buy-btn {
+    background-color: #e74c3c; /* Red color change on card hover */
+}
