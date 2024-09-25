@@ -1,16 +1,20 @@
 import React from 'react';
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { DesignServices, Code, Storage, Cloud, Language, Search } from '@mui/icons-material'; // Icons for categories
 import './Tech.css';
 
 export const Tech = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+
   return (
-    <Container className="tech-section" style={{ paddingTop: '120px' }}>
-      <Typography variant="h1" className="tech-heading" style={{ paddingBottom: '30px' }} >
+    <Container className="tech-section" style={{ paddingTop: isMobile ? '80px' : '120px' }}>
+      <Typography variant="h1" className="tech-heading" style={{ paddingBottom: isMobile ? '20px' : '30px' }}>
         Technologies
       </Typography>
 
-      <Grid container spacing={3} className="tech-grid">
+      <Grid container spacing={isMobile ? 2 : 3} className="tech-grid">
         {/* Design Section */}
         <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h3" className="tech-category">
@@ -95,5 +99,3 @@ export const Tech = () => {
     </Container>
   );
 };
-
-

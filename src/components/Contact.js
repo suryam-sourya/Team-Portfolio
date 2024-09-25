@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Spinner from 'react-bootstrap/Spinner'; // Import Spinner component
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -16,6 +17,7 @@ export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
+  const [loading, setLoading] = useState(false); // New state for loading
   const form = useRef(); // Using useRef to handle the form data
 
   const onFormUpdate = (category, value) => {
@@ -25,34 +27,40 @@ export const Contact = () => {
     });
   };
 
-  const sendEmail = async (e) => {
+  const sendFormData = async (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
 
-    // Send form data to backend API
+    if (!formDetails.firstName || !formDetails.email || !formDetails.message) {
+      setStatus({ success: false, message: 'Please fill in all required fields.' });
+      return;
+    }
+
+    setButtonText("Sending...");
+    setLoading(true); // Start loading
+
     try {
-      const response = await fetch('http://localhost:5000/api/contact/send', {
+      const response = await fetch('http://localhost:5001/api/contact/send', { // Ensure the correct API endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formDetails)
+        body: JSON.stringify(formDetails) // Send form data to backend
       });
 
       const result = await response.json();
 
       if (result.success) {
-        setStatus({ success: true, message: 'Message sent successfully' });
-        setButtonText('Send');
+        setStatus({ success: true, message: 'Message saved successfully' });
         setFormDetails(formInitialDetails); // Clear form fields
       } else {
-        setStatus({ success: false, message: 'Message not sent. Try again later.' });
-        setButtonText('Send');
+        setStatus({ success: false, message: 'Failed to save message.' });
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error saving form data:", error);
       setStatus({ success: false, message: 'Something went wrong. Please try again later.' });
-      setButtonText('Send');
+    } finally {
+      setButtonText("Send");
+      setLoading(false); // Stop loading
     }
   };
 
@@ -72,7 +80,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Get In Touch</h2>
-                  <form ref={form} id="contact-form" onSubmit={sendEmail}>
+                  <form ref={form} id="contact-form" onSubmit={sendFormData}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -113,7 +121,9 @@ export const Contact = () => {
                           placeholder="Message"
                           onChange={(e) => onFormUpdate('message', e.target.value)}
                         ></textarea>
-                        <button type="submit"><span>{buttonText}</span></button>
+                        <button type="submit">
+                          {loading ? <Spinner animation="border" /> : <span>{buttonText}</span>}
+                        </button>
                       </Col>
                       {status.message && (
                         <Col>

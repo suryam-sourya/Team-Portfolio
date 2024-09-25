@@ -1,57 +1,96 @@
+/* General Styles */
 .tech-page {
-    background-image: url('../assets/img/Techbg.jpg'); /* Path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
-    min-height: 100vh; /* Ensures the background image covers the entire viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures proper spacing between components */
-  }
-  
-  .tech-section {
-    padding-top: 120px; /* Adjust padding to make space for the NavBar */
-    padding-bottom: 50px;
-  }
-  
-  .tech-heading {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .tech-category {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  .tech-icon {
-    margin-right: 10px;
-    color: #4caf50;
-  }
-  
-  .tech-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .tech-list li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  /* In tech.css or footer.css */
-  .tech-footer {
-    background-color: #000 !important; /* Ensures the black background */
-    color: #fff; /* Text color to contrast the black background */
-    background-image: none; /* Remove background */
+  background-image: url('../assets/img/Techbg.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+  min-height: 100vh; /* Ensures the background image covers the entire viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures proper spacing between components */
+}
 
+.tech-section {
+  padding-top: 120px; /* Adjust padding to make space for the NavBar */
+  padding-bottom: 50px;
+}
+
+.tech-heading {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tech-category {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.tech-icon {
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-list li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .tech-heading {
+    font-size: 2.5rem;
   }
-    
+
+  .tech-category {
+    font-size: 1.5rem;
+  }
+
+  .tech-list li {
+    font-size: 1rem;
+  }
+
+  .tech-section {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+  .tech-heading {
+    font-size: 2.8rem;
+  }
+
+  .tech-category {
+    font-size: 1.8rem;
+  }
+
+  .tech-list li {
+    font-size: 1.1rem;
+  }
+
+  .tech-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Footer Styles */
+.tech-footer {
+  background-color: #000 !important; /* Ensures the black background */
+  color: #fff; /* Text color to contrast the black background */
+  background-image: none; /* Remove background */
+}

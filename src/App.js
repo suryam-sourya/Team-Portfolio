@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AboutPage } from "./components/AboutPage"; // <-- Separate About page
 import {TechPage} from "./components/TechPage"
+import { PricingPage } from "./components/PricingPage"
 function App() {
   return (
     <Router>
@@ -28,6 +29,7 @@ function App() {
         {/* About Page */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/tech-stack" element={<TechPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </Router>
   );
