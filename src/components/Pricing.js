@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 import './Pricing.css'; // Add custom CSS for attractive design
-
+import { HashLink } from 'react-router-hash-link';
 const Pricing = () => {
   // State to control the modal visibility
   const [showModal, setShowModal] = useState(false);
@@ -10,8 +10,8 @@ const Pricing = () => {
   // Plan details for different types of websites
   const planDetails = {
     Informative: {
-      Alpha: ['Single page website', 'Quarterly maintenance for 1 year', 'Free deployment - 1 time'],
-      Beta: ['Three-page website', 'Two months Domain', 'Quarterly updates + maintenance'],
+      Alpha: ['Free Logo','Free SSL Certification','UI/UX','Serverless Hosting', 'Quarterly maintenance for 1 year', 'Free deployment - 1 time'],
+      Beta: ['Free Logo','Free SSL Certification','UI/UX','Serverless Hosting','Three-page website', 'Quarterly updates + maintenance'],
       Gamma: ['Up to 5 pages website', 'Six months Domain', 'Monthly maintenance + updates'],
     },
     Ecommerce: {
@@ -42,18 +42,25 @@ const Pricing = () => {
   // Create a reusable plan card for each type and package
   const SubscriptionCard = React.memo(({ websiteType, planName, months, price }) => (
     <Col md={4} className="mb-4">
-      <Card
-        className={`pricing-card ${planName.toLowerCase()}`}
-        onClick={() => handleOpenModal(websiteType, planName, price)}
-      >
+      <Card className={`pricing-card ${planName.toLowerCase()}`}>
         <Card.Body>
           <Card.Title className="text-center">{planName} Package</Card.Title>
           <Card.Text className="text-center">{months} Months</Card.Text>
           <h3 className="text-center">${price}</h3>
-          <div className="text-center">
-            <Button variant="primary" className="buy-btn">
-              Buy
+          <div className="button-container d-flex justify-content-between">
+          <HashLink to='/#connect'>
+  <button className="vvd">
+    <span>Get a Quote</span>
+  </button>
+</HashLink>
+            {/* Trigger modal on View Details click */}
+            
+            <Button variant="secondary" size="sm" className="view-btn" onClick={() => handleOpenModal(websiteType, planName, price)}>
+              View Details
             </Button>
+            {/* Get Quotes hash link without background */}
+            
+
           </div>
         </Card.Body>
       </Card>
