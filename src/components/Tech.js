@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { DesignServices, Code, Storage, Cloud, Language, Search } from '@mui/icons-material'; // Icons for categories
+import { DesignServices, Code, Storage, Cloud, Language, Search, BarChart } from '@mui/icons-material';
 import './Tech.css';
 
 export const Tech = () => {
@@ -86,6 +86,19 @@ export const Tech = () => {
           </ul>
         </Grid>
 
+
+        {/* New Data Analysis Section */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" className="tech-category">
+            <BarChart fontSize="large" className="tech-icon" /> Data Analysis
+          </Typography>
+          <ul className="tech-list">
+            <li>Power BI</li>
+            <li>MS-Excel</li>
+            <li>Tableau</li>
+          </ul>
+        </Grid>
+
         {/* SEO Section */}
         <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h3" className="tech-category">
@@ -95,6 +108,7 @@ export const Tech = () => {
             <li>Google Analytics</li>
           </ul>
         </Grid>
+
       </Grid>
     </Container>
   );

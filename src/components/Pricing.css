@@ -1,5 +1,83 @@
-
+.vvd span:hover {
+       color: #f39c12;  /* Blue background on hover */
+                     /* White text on hover */
+  }
+  
+  .vvd span {
+    font-weight: bold;
+    
+                 /* Bold text inside the button */
+  }
+.button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .view-btn {
+    width: 45%;
+  }
+  
+  .quote-btn {
+    width: 45%;
+  }
+  
+  .pricing-card {
+    cursor: pointer;
+  }
+  
 /* Add blur effect when modal is open */
+
+/* Styles scoped to the modal */
+/* Styles scoped to the modal */
+.modal-body-custom {
+    font-size: 0.95rem; /* General font size for modal content */
+    padding: 1.5rem;
+  }
+  
+  .modal-body-custom .package-details {
+    list-style-type: disc; /* Bullet points for plan details */
+    padding-left: 1.5rem; /* Indentation for bullets */
+    text-align: left;
+    font-size: 0.9rem; /* Reduce font size for details */
+    line-height: 1.4; /* Adjust line-height for tighter spacing */
+  }
+  
+  .modal-body-custom .package-details li {
+    margin-bottom: 0.3rem; /* Reduce the margin between list items */
+  }
+  
+  .modal-body-custom .package-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-body-custom .package-price span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .modal-header-custom {
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-footer-custom {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .modal-footer-custom .close-btn-custom {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  /* Hover effect for close button */
+  .modal-footer-custom .close-btn-custom:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+    
 .modal-content {
     background-color:black; /* Dark blue background for the modal */
     color: #ecf0f1; /* Light text for better contrast */
